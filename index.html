@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AleStudioPrintingS | Ale Digital Printing, Fotocopy, Desain & ATK</title>
+<meta name="description" content="AleStudioPrintingS membantu kebutuhan print, fotocopy, desain, editing, undangan digital, ATK, dan percetakan custom di Pekanbaru." />
+<style>
+:root{
+  --bg:#070b12;--bg2:#0c1220;--card:#101827;--card2:#131e30;--text:#f4f7fb;--muted:#9ba9bd;
+  --cyan:#23d5ff;--pink:#ff3cac;--violet:#8b5cf6;--line:rgba(255,255,255,.09);--ok:#53e29c;
+  --shadow:0 18px 50px rgba(0,0,0,.35);--radius:22px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 10%,rgba(35,213,255,.12),transparent 28%),radial-gradient(circle at 85% 18%,rgba(255,60,172,.10),transparent 25%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+.container{width:min(1180px,calc(100% - 32px));margin:auto}
+.topline{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#c8d4e4;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:8px 0;opacity:.82}
+.marquee{display:inline-block;min-width:100%;animation:marquee 30s linear infinite}@keyframes marquee{to{transform:translateX(-35%)}}
+nav{position:sticky;top:0;z-index:40;background:rgba(7,11,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--violet),var(--pink));box-shadow:0 0 24px rgba(35,213,255,.25);color:#071018;font-weight:900}.brand small{display:block;font-size:11px;color:var(--muted);font-weight:600}.nav-links{display:flex;gap:22px;color:#c7d2e2;font-size:14px}.nav-actions{display:flex;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:14px;border:1px solid var(--line);background:#111a28;color:white;font-weight:700;cursor:pointer}.btn.primary{border:0;background:linear-gradient(135deg,var(--cyan),#6f73ff,var(--pink));color:white}.btn.ghost{background:transparent}.btn:hover{transform:translateY(-1px)}
+.search{margin-top:22px;display:flex;gap:10px;max-width:760px}.search input{flex:1;background:#0d1522;border:1px solid var(--line);color:#fff;border-radius:14px;padding:14px 16px;outline:none}.search input:focus{border-color:rgba(35,213,255,.55);box-shadow:0 0 0 3px rgba(35,213,255,.08)}
+.hero{padding:80px 0 50px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:46px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:14px 0 22px;letter-spacing:-.045em}.hero h1 span{background:linear-gradient(90deg,#fff,var(--cyan),#b18aff,#ff76c5);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:720px;color:#b7c3d4;font-size:18px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-art{position:relative;border:1px solid var(--line);border-radius:32px;overflow:hidden;min-height:520px;background:linear-gradient(150deg,#13233a,#0b1019);box-shadow:var(--shadow)}.hero-art img{width:100%;height:100%;min-height:520px;object-fit:cover;opacity:.9}.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,14,.72),transparent 55%)}.floating{position:absolute;left:20px;right:20px;bottom:20px;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.pill{background:rgba(9,14,23,.75);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:13px;font-size:12px;color:#d4ddeb}.pill b{display:block;color:#fff;font-size:14px}.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:20px 0 0;color:#c8d3e2;overflow:hidden;white-space:nowrap;font-size:12px;letter-spacing:.17em}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}.section-head h2{font-size:clamp(30px,5vw,50px);line-height:1.05;margin:6px 0}.section-head p{max-width:640px;color:var(--muted)}
+.video-card{overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow)}.video-wrap{position:relative;padding-top:56.25%}.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.wedding{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px}.wedding-card,.visual-card{border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,#141726,#0a0f18);overflow:hidden;box-shadow:var(--shadow)}.wedding-card img,.visual-card img{height:330px;width:100%;object-fit:cover}.card-body{padding:24px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#e9cf7d}.card-body h3{font-size:28px;margin:7px 0 10px}.card-body p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{background:linear-gradient(160deg,var(--card2),#0e1520);border:1px solid var(--line);border-radius:20px;padding:24px;min-height:220px;position:relative;overflow:hidden}.service .num{font-size:13px;color:var(--cyan);font-weight:800}.service h3{font-size:21px;line-height:1.2;margin:28px 0 10px}.service p{color:var(--muted);font-size:14px}.service:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--cyan);filter:blur(70px);opacity:.06;right:-35px;top:-35px}
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.solution{border:1px solid var(--line);border-radius:20px;background:#0d1521;padding:22px}.solution small{color:var(--pink);font-weight:800;text-transform:uppercase;letter-spacing:.1em}.solution h3{margin:8px 0}.solution p{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:25px;border-radius:22px;background:linear-gradient(135deg,#111b2c,#0b111c);border:1px solid var(--line)}.step span{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--violet));font-weight:900}.step h3{margin:18px 0 8px}.step p{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0c1420}.gallery-card img{height:250px;width:100%;object-fit:cover}.gallery-card .card-body{padding:18px}.gallery-card small{color:var(--cyan)}
+.catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.catalog-card{border:1px solid var(--line);border-radius:20px;background:#0d1420;padding:22px}.catalog-card h3{margin:0 0 12px}.catalog-card ul{padding-left:18px;color:#acb8ca;margin:0}.catalog-card li{margin:7px 0}
+.empty-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.empty{border:1px dashed rgba(255,255,255,.18);border-radius:22px;padding:30px;color:var(--muted);background:rgba(255,255,255,.02)}
+.location{display:grid;grid-template-columns:1fr 1fr;gap:20px}.map-card{min-height:350px;border:1px solid var(--line);border-radius:24px;background:radial-gradient(circle at 40% 40%,rgba(35,213,255,.2),transparent 28%),linear-gradient(145deg,#102135,#09111c);display:grid;place-items:center;text-align:center;padding:28px}.map-dot{width:22px;height:22px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 10px rgba(255,60,172,.1),0 0 28px rgba(255,60,172,.7);margin:0 auto 18px}.contact-card{border:1px solid var(--line);border-radius:24px;background:#101827;padding:28px}.contact-card h3{font-size:31px;margin:0 0 10px}.contact-card p{color:var(--muted)}
+.socials{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}.social{padding:14px;border:1px solid var(--line);border-radius:14px;text-align:center;background:#0b121d;font-size:13px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{border:1px solid var(--line);border-radius:18px;padding:20px;background:#101827}.stat strong{font-size:35px;display:block}.stat small{color:var(--muted)}
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.comment{border:1px solid var(--line);border-radius:18px;background:#0d1521;padding:18px}.comment b{display:block}.comment small{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:#97a5b8}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.badge{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:#b8c4d5;font-size:12px}
+@media(max-width:960px){.nav-links{display:none}.hero-grid,.wedding,.location{grid-template-columns:1fr}.hero-art{min-height:420px}.hero-art img{min-height:420px}.grid{grid-template-columns:repeat(2,1fr)}.solution-grid,.steps,.catalog,.gallery{grid-template-columns:1fr 1fr}.socials{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.container{width:min(100% - 22px,1180px)}.hero{padding-top:48px}.hero h1{font-size:44px}.nav-actions .ghost{display:none}.grid,.solution-grid,.steps,.catalog,.gallery,.empty-grid,.stats,.comments{grid-template-columns:1fr}.floating{grid-template-columns:1fr}.hero-art,.hero-art img{min-height:440px}.section-head{display:block}.socials{grid-template-columns:1fr 1fr}.btn{width:100%}.hero-actions{display:grid;grid-template-columns:1fr}.search{display:block}.search button{margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="topline"><div class="marquee">CDR CREATE PRINT IMAGINE DESIGN COLOR CRAFT &nbsp; • &nbsp; STUDIO SNR DESIGN • CREATIVE PRINTING • DIGITAL ARTWORK • STUDIO SNR DESIGN • CREATIVE PRINTING • DIGITAL ARTWORK</div></div>
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark">A</span><span>AleStudioPrintingS<small>Creative Print Studio</small></span></a>
+    <div class="nav-links"><a href="#jasa">Jasa</a><a href="#katalog">Katalog</a><a href="#lokasi">Lokasi</a><a href="#kontak">Kontak</a></div>
+    <div class="nav-actions"><a class="btn ghost" href="#katalog">Katalog</a><a class="btn primary" href="https://wa.me/6285297484243?text=Halo%20AleStudioPrintingS%2C%20saya%20ingin%20bertanya%20tentang%20harga%20produk%20atau%20layanan." target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+</nav>
+<main id="top">
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Creative printing, powered by ideas</div>
+        <h1>Print, Design & <span>Stationery</span> All in One Place.</h1>
+        <p>AleStudioPrintingS membantu mewujudkan dokumen, desain, undangan, kebutuhan percetakan, buku, dan produk ATK untuk pribadi, sekolah, kantor, serta usaha.</p>
+        <div class="hero-actions"><a class="btn primary" href="#katalog">Jelajahi katalog</a><a class="btn" href="https://wa.me/6285297484243" target="_blank" rel="noopener">Hubungi AleStudioPrintingS</a></div>
+        <div class="search"><input id="searchInput" type="search" placeholder="Cari katalog, jasa, bisnis, properti, jual beli…"/><button class="btn" onclick="runSearch()">Cari</button></div>
+      </div>
+      <div class="hero-art"><img src="https://aleprinting.my.id/brand/alesha-wallpaper.png" alt="Logo neon AleStudioPrintingS" onerror="this.style.opacity='.15'"/><div class="floating"><div class="pill"><b>Hasil rapi</b>Diperiksa sebelum diserahkan</div><div class="pill"><b>Bisa custom</b>Desain, bahan, ukuran fleksibel</div><div class="pill"><b>Respons cepat</b>Konsultasi via WhatsApp</div></div></div>
+    </div>
+  </div>
+  <div class="strip"><div class="marquee">PRINT • DESIGN • EDITING • STATIONERY • DIGITAL INVITATION • CREATIVE SERVICE • PRINT • DESIGN • EDITING • STATIONERY • DIGITAL INVITATION • CREATIVE SERVICE</div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Iklan toko</div><h2>Video Iklan & Promosi</h2></div><a class="btn" href="#jasa">Lihat jasa</a></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/vOwQEEk7PSE" title="Video promosi AleStudioPrintingS" allowfullscreen></iframe></div></div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Undangan online / digital</div><h2>Pilih gaya untuk momen Anda</h2></div><p>Contoh template. Foto pasangan dibuat dengan AI, nama bersifat ilustrasi. Pesanan dapat memakai foto, video, nama, tanggal, dan detail acara Anda sendiri.</p></div><div class="wedding"><article class="wedding-card"><img src="https://aleprinting.my.id/media/prewedding-demo.png" alt="Contoh prewedding ilustrasi AI" onerror="this.style.opacity='.15'"/><div class="card-body"><div class="kicker">The Wedding Of</div><h3>Alya & Raka</h3><p>Midnight Gold · Elegan · hitam & emas. SAVE THE DATE — tanggal & lokasi pilihan Anda.</p><a class="btn primary" href="https://wa.me/6285297484243" target="_blank">Pesan Undangan</a></div></article><article class="visual-card"><img src="https://aleprinting.my.id/profile/logo-idea-studio.png" alt="Studio visual logo 3D" onerror="this.style.opacity='.15'"/><div class="card-body"><div class="eyebrow">Logo, 3D & Visual Lab</div><h3>Jasa editing logo, 3D, dan video visual</h3><p>Dari ide awal dan perapian logo hingga modeling 3D, rendering produk, serta video visual untuk promosi, presentasi, dan media sosial.</p><div class="badges"><span class="badge">Konsep & ide logo</span><span class="badge">Editing</span><span class="badge">Visualisasi 3D</span><span class="badge">Video visual 3D</span></div></div></article></div></div>
+</section>
+<section id="jasa">
+<div class="container"><div class="section-head"><div><div class="eyebrow">Layanan AleStudioPrintingS</div><h2>Dari ide hingga hasil jadi.</h2></div><p>Satu tempat untuk menyiapkan, mendesain, mencetak, dan menyelesaikan kebutuhan Anda.</p></div><div class="grid search-zone">
+<article class="service"><div class="num">01</div><h3>Fotocopy & semua percetakan</h3><p>Dokumen, kartu nama, brosur, stiker, banner, nota, kalender, sertifikat, kemasan, dan cetak custom.</p></article>
+<article class="service"><div class="num">02</div><h3>Desain kreatif</h3><p>Identitas usaha, materi promosi, undangan, konten digital, layout cetak, dan desain sesuai kebutuhan.</p></article>
+<article class="service"><div class="num">03</div><h3>Editing & dokumen</h3><p>Pengetikan dan penyuntingan PDF, Word, Excel, PowerPoint, JPG, PNG, foto, serta berkas siap cetak.</p></article>
+<article class="service"><div class="num">04</div><h3>Toko buku & ATK</h3><p>Perlengkapan sekolah, kantor, usaha, administrasi, dan kebutuhan alat tulis sehari-hari.</p></article>
+</div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Solusi bisnis & kebutuhan lainnya</div><h2>Untuk setiap ide, usaha, dan momen.</h2></div></div><div class="solution-grid search-zone">
+<div class="solution"><small>UMKM & Bisnis</small><h3>Branding usaha lebih siap jual</h3><p>Logo, kartu nama, nota, stiker kemasan, label produk, banner, katalog, dan materi promosi.</p></div>
+<div class="solution"><small>Sekolah & Kantor</small><h3>Dokumen rapi, kebutuhan lengkap</h3><p>Print tugas, laporan, modul, jilid, laminating, scan, buku administrasi, dan perlengkapan ATK.</p></div>
+<div class="solution"><small>Acara & Undangan</small><h3>Momen spesial lebih berkesan</h3><p>Undangan cetak dan digital, kartu ucapan, sertifikat, suvenir cetak, serta desain acara personal.</p></div>
+<div class="solution"><small>Promosi & Konten</small><h3>Visual yang mudah dikenali</h3><p>Poster, flyer, brosur, konten media sosial, banner, menu, dan materi kampanye usaha.</p></div>
+<div class="solution"><small>Pusat Dokumen</small><h3>Berkas siap cetak dan dibagikan</h3><p>Pengetikan, edit PDF, Word, Excel, PowerPoint, foto, konversi berkas, scan, dan arsip digital.</p></div>
+<div class="solution"><small>Produk Custom</small><h3>Dibuat sesuai ide Anda</h3><p>Cetak ukuran khusus, label, kemasan, merchandise, kebutuhan komunitas, dan pesanan kreatif lainnya.</p></div>
+</div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Cara pesan mudah</div><h2>Dari pesan hingga produk jadi.</h2></div></div><div class="steps"><div class="step"><span>01</span><h3>Ceritakan kebutuhan</h3><p>Kirim file, ukuran, jumlah, dan waktu pengerjaan melalui WhatsApp.</p></div><div class="step"><span>02</span><h3>Cek & konfirmasi</h3><p>Kami periksa bahan, desain, pilihan pengerjaan, serta informasikan harga.</p></div><div class="step"><span>03</span><h3>Produksi & ambil</h3><p>Pesanan dikerjakan, diperiksa, lalu disiapkan untuk diambil.</p></div></div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Galeri inspirasi</div><h2>Lihat yang bisa kami wujudkan.</h2></div><p>Gambar adalah contoh visual produk dan layanan. Hasil akhir disesuaikan dengan kebutuhan pelanggan.</p></div><div class="gallery"><article class="gallery-card"><img src="https://aleprinting.my.id/profile/stationery-neon.png" alt="ATK dan kebutuhan kantor" onerror="this.style.opacity='.15'"/><div class="card-body"><small>Produk</small><h3>ATK & kebutuhan kantor</h3><p>Pilihan perlengkapan sekolah, kantor, dan aktivitas kreatif sehari-hari.</p></div></article><article class="gallery-card"><img src="https://aleprinting.my.id/profile/printing-studio.png" alt="Percetakan modern" onerror="this.style.opacity='.15'"/><div class="card-body"><small>Jasa</small><h3>Percetakan modern</h3><p>Dari dokumen sampai materi promosi dengan pengerjaan rapi dan fleksibel.</p></div></article><article class="gallery-card"><img src="https://aleprinting.my.id/profile/creative-design.png" alt="Desain dan editing" onerror="this.style.opacity='.15'"/><div class="card-body"><small>Layanan kreatif</small><h3>Desain, editing & undangan</h3><p>Visual digital dan cetak yang disiapkan sesuai tujuan, acara, atau identitas usaha.</p></div></article></div></div>
+</section>
+<section id="katalog">
+<div class="container"><div class="section-head"><div><div class="eyebrow">Katalog produk & jasa</div><h2>Temukan yang Anda butuhkan.</h2></div><a class="btn primary" href="https://wa.me/6285297484243" target="_blank">Tanya harga ke admin</a></div><p style="color:var(--muted);max-width:760px">Harga menyesuaikan bahan, ukuran, jumlah, dan tingkat pengerjaan. Hubungi admin untuk konsultasi dan informasi harga terbaru.</p><div class="catalog search-zone">
+<div class="catalog-card"><h3>Produk ATK</h3><ul><li>Kertas HVS & kertas khusus</li><li>Buku tulis & buku administrasi</li><li>Pulpen, pensil & spidol</li><li>Lem, lakban & perekat</li><li>Map, stapler & perlengkapan kantor</li></ul></div>
+<div class="catalog-card"><h3>Produk Percetakan</h3><ul><li>Kartu nama & ID card</li><li>Brosur, flyer & poster</li><li>Spanduk, banner & stiker</li><li>Nota, faktur & kop surat</li><li>Kalender, sertifikat & label kemasan</li></ul></div>
+<div class="catalog-card"><h3>Jasa Edit</h3><ul><li>Pengetikan & penyusunan dokumen</li><li>Edit PDF, Word, Excel & PowerPoint</li><li>Edit JPG, PNG & foto</li><li>Layout buku, laporan & proposal</li><li>Desain materi promosi digital</li></ul></div>
+<div class="catalog-card"><h3>Undangan Online</h3><ul><li>Undangan website</li><li>Undangan gambar & PDF</li><li>Undangan video singkat</li><li>Desain acara personal</li><li>Materi berbagi untuk WhatsApp</li></ul></div>
+<div class="catalog-card"><h3>Undangan Offline</h3><ul><li>Undangan pernikahan</li><li>Undangan ulang tahun</li><li>Undangan acara & syukuran</li><li>Kartu ucapan & amplop</li><li>Cetak custom berbagai ukuran</li></ul></div>
+<div class="catalog-card"><h3>Custom Printing</h3><ul><li>Fotocopy, scan & print dokumen</li><li>Laminating, jilid & finishing</li><li>Cetak satuan atau jumlah banyak</li><li>Konsultasi bahan & ukuran</li><li>Pengerjaan sesuai kebutuhan pelanggan</li></ul></div>
+</div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Properti & jual beli</div><h2>Temukan peluang berikutnya.</h2></div></div><div class="empty-grid"><div class="empty"><h3>Properti</h3><p>Belum ada iklan properti yang ditampilkan.</p></div><div class="empty"><h3>Jual beli</h3><p>Belum ada iklan jual beli yang ditampilkan.</p></div></div></div>
+</section>
+<section id="lokasi">
+<div class="container"><div class="section-head"><div><div class="eyebrow">Dunia → lokasi toko</div><h2>Lokasi AleStudioPrintingS</h2></div><p>Kota Pekanbaru, Riau, Indonesia · 0.487490, 101.407046</p></div><div class="location"><a class="map-card" href="https://maps.app.goo.gl/GSR12Ebew5oHd4Gc8?g_st=ac" target="_blank" rel="noopener"><div><div class="map-dot"></div><h3>Buka titik lokasi</h3><p>Tekan untuk membuka Google Maps.</p></div></a><div id="kontak" class="contact-card"><div class="eyebrow">Kontak</div><h3>Konsultasikan kebutuhan Anda.</h3><p>Tanyakan bahan, ukuran, jumlah, pengerjaan, dan harga langsung melalui WhatsApp.</p><a class="btn primary" href="https://wa.me/6285297484243" target="_blank">WhatsApp · 0852-9748-4243</a><div class="socials"><a class="social" href="https://www.facebook.com/marketplace/profile/100008149144382/" target="_blank">Facebook</a><a class="social" href="https://www.instagram.com/kam0p_/" target="_blank">Instagram</a><a class="social" href="https://shopee.co.id/e.muharompamungkas" target="_blank">Shopee</a><a class="social" href="https://www.tokopedia.com/fotocopy-hasbi/product" target="_blank">Tokopedia</a><a class="social" href="https://vt.tiktok.com/ZSqASwpsG/?page=Mall" target="_blank">TikTok Shop</a></div></div></div></div>
+</section>
+<section>
+<div class="container"><div class="section-head"><div><div class="eyebrow">Suara pelanggan</div><h2>Komentar, kritik & saran</h2></div><p>Masukan membantu AleStudioPrintingS terus memperbaiki produk dan layanan.</p></div><div class="stats"><div class="stat"><strong>118</strong><small>Kunjungan unik harian</small></div><div class="stat"><strong>7</strong><small>Pengunjung yang menghubungi</small></div><div class="stat"><strong>3</strong><small>Komentar, kritik & saran</small></div></div><div class="comments"><div class="comment"><b>arilridwan034 · komentar</b><p>Mantap apk berguna banget untuk umkm potocopy</p><small>10 Sep 2026</small></div><div class="comment"><b>Asnahcantik · saran</b><p>Mungkin bisa di rangkum lebih detail lagi atau dikelompokkan biar pembaca ga pusing saran aja ya</p><small>8 Sep 2026</small></div><div class="comment"><b>ekasonor08 · komentar</b><p>Wellcom to profil</p><small>8 Sep 2026</small></div></div></div>
+</section>
+</main>
+<footer><div class="container footer-inner"><div>© 2026 AleStudioPrintingS · Fotocopy, Printing & Stationery Shop</div><div><a href="#jasa">Jasa</a> · <a href="#katalog">Katalog</a> · <a href="#kontak">Kontak</a></div></div></footer>
+<script>
+function runSearch(){
+ const q=(document.getElementById('searchInput').value||'').trim().toLowerCase();
+ if(!q) return;
+ const items=[...document.querySelectorAll('.search-zone > *')];
+ let found=null;
+ items.forEach(el=>{const hit=el.innerText.toLowerCase().includes(q);el.style.outline=hit?'2px solid #23d5ff':'none';el.style.outlineOffset=hit?'3px':'0';if(hit&&!found)found=el});
+ if(found)found.scrollIntoView({behavior:'smooth',block:'center'}); else alert('Belum ditemukan di katalog. Silakan hubungi admin melalui WhatsApp.');
+}
+document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')runSearch()});
+</script>
+</body>
+</html>
