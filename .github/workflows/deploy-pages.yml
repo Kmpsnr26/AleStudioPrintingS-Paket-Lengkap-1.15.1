@@ -1,37 +1,75 @@
-name: Deploy AleStudioPrintingS to GitHub Pages
+name: Deploy projects to private hosting
 
 on:
   push:
     branches: ["main"]
+    paths:
+      - "projects/**"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: "private-projects-deploy"
   cancel-in-progress: true
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout private repository
         uses: actions/checkout@v6
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Validate deployment secrets
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_PROJECTS_PATH: ${{ secrets.DEPLOY_PROJECTS_PATH }}
+        run: |
+          missing=0
+          for name in DEPLOY_HOST DEPLOY_USER DEPLOY_SSH_KEY DEPLOY_PROJECTS_PATH; do
+            if [ -z "${!name}" ]; then
+              echo "::error::GitHub Actions secret $name belum diatur"
+              missing=1
+            fi
+          done
+          exit "$missing"
 
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: "."
+      - name: Configure SSH
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" | tr -d '\r' > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          PORT="${DEPLOY_PORT:-22}"
+          ssh-keyscan -p "$PORT" -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy projects directory
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PROJECTS_PATH: ${{ secrets.DEPLOY_PROJECTS_PATH }}
+        run: |
+          PORT="${DEPLOY_PORT:-22}"
+          ssh -i ~/.ssh/id_deploy -p "$PORT" "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p '$DEPLOY_PROJECTS_PATH'"
+          rsync -az --checksum \
+            -e "ssh -i ~/.ssh/id_deploy -p $PORT" \
+            projects/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PROJECTS_PATH/"
+
+      - name: Deployment summary
+        run: |
+          echo "### AleStudioPrintingS private deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "Projects berhasil dikirim dari repo private ke hosting." >> "$GITHUB_STEP_SUMMARY"
+          echo "Target AleStoreCollection: https://aleprinting.my.id/projects/alestoreCollection/" >> "$GITHUB_STEP_SUMMARY"
